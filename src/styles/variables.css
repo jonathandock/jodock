@@ -1,0 +1,17 @@
+:root {
+  /* COLORS */
+  --spotify: #1ed760;
+  --applemusic: #fa243c;
+  --deezer: #a238ff;
+  --youtube: #ff0000;
+  --instagram: #ff0069;
+  --facebook: #0866ff;
+  --soundcloud: #ff5500;
+
+  --white: #fff;
+  --white-rgb: 255, 255, 255;
+  --white-contrast: #333;
+
+  --black: #000;
+  --black-contrast: #fff;
+}

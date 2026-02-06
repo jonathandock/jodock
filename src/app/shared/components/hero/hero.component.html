@@ -1,0 +1,17 @@
+<div class="hero flex items-center justify-center" [class.fullscreen]="fullscreen()">
+  <img
+    fill
+    priority
+    [ngSrc]="backgroundImage()"
+    class="background-image object-cover"
+    alt="Image de présentation du groupe JODOCK"
+  />
+  <img
+    class="logo"
+    [ngSrc]="logo()"
+    width="400"
+    height="280"
+    priority
+    alt="Image de présentation du groupe JODOCK"
+  />
+</div>

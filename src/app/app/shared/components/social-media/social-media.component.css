@@ -1,0 +1,14 @@
+.links {
+  bottom: 1rem;
+  left: 50%;
+  background: var(--black);
+}
+
+.links.fixed {
+  transform: translateX(-50%);
+}
+
+.divider {
+  height: 26px;
+  border-right: 1px solid rgba(var(--white-rgb), 0.5);
+}

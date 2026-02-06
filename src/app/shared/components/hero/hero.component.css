@@ -1,0 +1,20 @@
+.hero {
+  width: 100%;
+  position: relative;
+  min-height: 300px;
+}
+
+.hero.fullscreen {
+  height: 100vh;
+
+  img.background-image {
+    position: absolute;
+    object-fit: cover;
+  }
+
+  img.logo {
+    position: absolute;
+    z-index: 1;
+    margin: auto auto;
+  }
+}
