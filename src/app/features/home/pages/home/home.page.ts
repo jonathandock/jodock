@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HeroComponent } from '../../../../shared/components/hero/hero.component';
-import { SocialMediaComponent } from '../../../../app/shared/components/social-media/social-media.component';
+import { SocialMediaComponent } from '../../../../shared/components/social-media/social-media.component';
 
 @Component({
   selector: 'app-home',

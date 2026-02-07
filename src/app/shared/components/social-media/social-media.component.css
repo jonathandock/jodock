@@ -4,6 +4,10 @@
   background: var(--black);
 }
 
+.link {
+  flex: 1 0 26px;
+}
+
 .links.fixed {
   transform: translateX(-50%);
 }
@@ -11,4 +15,8 @@
 .divider {
   height: 26px;
   border-right: 1px solid rgba(var(--white-rgb), 0.5);
+}
+
+img {
+  width: 26px;
 }
