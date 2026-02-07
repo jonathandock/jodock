@@ -2,6 +2,8 @@
   bottom: 1rem;
   left: 50%;
   background: var(--black);
+  width: max-content;
+  width: -webkit-max-content;
 }
 
 .link {
