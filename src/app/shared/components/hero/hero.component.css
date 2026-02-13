@@ -10,11 +10,17 @@
   img.background-image {
     position: absolute;
     object-fit: cover;
+    z-index: -1;
   }
 
   img.logo {
     position: absolute;
-    z-index: 1;
     margin: auto auto;
   }
+}
+
+.icon-down {
+  position: absolute;
+  bottom: 6rem;
+  left: calc(50% - 12px);
 }

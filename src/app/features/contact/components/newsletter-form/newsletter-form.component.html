@@ -1,0 +1,59 @@
+<div class="newsletter-form">
+  <h3 class="text-2xl font-black">S'inscrire à la newsletter</h3>
+  <p class="mb-2">
+    Soyez informés des nouveautés, dates de concerts et privilèges pour les abonnés
+  </p>
+  <form novalidate (submit)="onSubmit($event)">
+    <div class="flex gap-2">
+      <label class="mb-2 flex-1 block">
+        <input
+          type="text"
+          placeholder="Prénom*"
+          class="border border-solid border-neutral-300 rounded-lg px-2 py-1 block w-full outline-none"
+          [formField]="newsletterForm.firstName"
+        />
+        @if (newsletterForm.firstName().touched() && newsletterForm.firstName().invalid()) {
+          <ul class="error-list">
+            @for (error of newsletterForm.firstName().errors(); track error) {
+              <li class="text-xs text-red-500 mt-2">{{ error.message }}</li>
+            }
+          </ul>
+        }
+      </label>
+      <label class="mb-2 flex-1 block">
+        <input
+          type="text"
+          placeholder="Nom"
+          class="border border-solid border-neutral-300 rounded-lg px-2 py-1 block w-full outline-none"
+          [formField]="newsletterForm.lastName"
+        />
+      </label>
+    </div>
+    <label class="block mb-2">
+      <input
+        type="email"
+        placeholder="Adresse e-mail*"
+        class="border border-solid border-neutral-300 rounded-lg px-2 py-1 block w-full outline-none"
+        [formField]="newsletterForm.email"
+      />
+      @if (newsletterForm.email().touched() && newsletterForm.email().invalid()) {
+        <ul class="error-list">
+          @for (error of newsletterForm.email().errors(); track error) {
+            <li class="text-xs text-red-500 mt-2">{{ error.message }}</li>
+          }
+        </ul>
+      }
+    </label>
+    <label class="block mb-2">
+      <button
+        type="submit"
+        class="bg-stone-900 text-stone-50 rounded-lg px-4 py-2 outline-none"
+        [disabled]="newsletterForm().invalid()"
+      >
+        Je m'inscris
+      </button>
+      <p class="text-xs text-green-500 mt-2">Vous avez bien été inscrit à la newsletter, merci !</p>
+      <p class="text-xs text-red-500 mt-2">Une erreur est survenue</p>
+    </label>
+  </form>
+</div>

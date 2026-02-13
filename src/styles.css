@@ -1,8 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+@import './styles/fonts.css';
+@import './styles/icons.css';
 @import './styles/variables.css';
 
 * {
   box-sizing: border-box;
+}
+
+:disabled {
+  opacity: 0.5;
 }
