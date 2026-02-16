@@ -1,14 +1,10 @@
-export interface BrevoContact {
-  email: string;
-  attributes: BrevoContactAttributes;
-  emailBlacklisted?: boolean;
-  smsBlacklisted?: boolean;
-  listIds: number[];
-  updateEnabled?: boolean;
-  smtpBlacklistSender?: string[];
+export interface BrevoApiSuccess {
+  id: number;
 }
 
-export interface BrevoContactAttributes {
-  PRENOM: string;
-  NOM?: string;
+export interface BrevoApiError {
+  message: string;
+  code: string;
 }
+
+export type BrevoApiResult<T> = { success: boolean; data: T } | { success: boolean; error: string };

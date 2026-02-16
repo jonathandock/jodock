@@ -14,7 +14,7 @@ export class BandsInTownService {
   public loadConcerts(): any {
     console.log('load concert');
     this.http
-      .get(`${environment.bandsInTown.endpoint}/events/?app_id=${environment.bandsInTown.apikey}`)
+      .get(`${environment.bandsInTown.endpoint}/events/?app_id=${environment.bandsInTown.apiKey}`)
       .pipe(tap((res) => console.log(res)))
       .subscribe();
   }

@@ -1,11 +1,12 @@
+import { secrets } from './globals.local';
+
 export const globals = {
   bandsInTown: {
-    apikey: 'https://rest.bandsintown.com/artists/jodock',
-    endpoint: '5b365add1ba8ea0c90384e01c6f0d43c',
+    apiKey: secrets.bandsInTown.apiKey,
+    endpoint: 'https://rest.bandsintown.com/artists/jodock',
   },
   brevo: {
-    apiKey:
-      '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',
+    apiKey: secrets.brevo.apiKey,
     endpoint: 'https://api.brevo.com/v3',
   },
   musicLinks: [

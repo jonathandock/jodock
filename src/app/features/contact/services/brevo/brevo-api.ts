@@ -1,10 +1,10 @@
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { Observable, tap } from 'rxjs';
+import { catchError, map, Observable, of, tap, throwError } from 'rxjs';
 import { NewsletterData } from '../../models/forms.models';
 import { environment } from '../../../../../environments/environment';
-import { BrevoContact, BrevoContactAttributes } from '../../models/brevo.models';
-import { email } from '@angular/forms/signals';
+import { CreateContact, ErrorModel } from '@getbrevo/brevo';
+import { BrevoApiError, BrevoApiResult, BrevoApiSuccess } from '../../models/brevo.models';
 
 @Injectable({
   providedIn: 'root',
@@ -17,14 +17,24 @@ export class BrevoApi {
    * @param contact
    * @returns
    */
-  public createContact(contact: NewsletterData): Observable<any> {
+  public createContact(contact: NewsletterData): Observable<BrevoApiResult<BrevoApiSuccess>> {
     console.log(this.formatCreateContactParams(contact));
     return this.http
-      .post(`${environment.brevo.endpoint}/contacts`, this.formatCreateContactParams(contact))
+      .post<BrevoApiSuccess>(
+        `${environment.brevo.endpoint}/contacts`,
+        this.formatCreateContactParams(contact),
+      )
       .pipe(
-        tap((res) => {
-          console.log(res);
-        }),
+        map((data) => ({
+          success: true,
+          data,
+        })),
+        catchError((err: HttpErrorResponse) =>
+          of({
+            success: false,
+            error: 'error',
+          }),
+        ),
       );
   }
 
@@ -33,7 +43,7 @@ export class BrevoApi {
    * @param contact
    * @returns
    */
-  private formatCreateContactParams(contact: NewsletterData): BrevoContact {
+  private formatCreateContactParams(contact: NewsletterData): CreateContact {
     return {
       listIds: [2],
       email: contact.email,

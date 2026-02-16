@@ -12,6 +12,9 @@ import { BrevoApi } from '../../services/brevo/brevo-api';
 })
 export class NewsletterFormComponent {
   public brevoApi = inject(BrevoApi);
+
+  public submissionState = signal<{ success: boolean; error?: string } | null>(null);
+
   public newsletterFormModel = signal<NewsletterData>({
     firstName: '',
     lastName: '',
@@ -27,11 +30,21 @@ export class NewsletterFormComponent {
   public onSubmit(event: Event): void {
     // prevent page to reload
     event.preventDefault();
+    this.submissionState.set(null);
     const formData = this.newsletterFormModel();
+    /**
+     * todo: use properly submit and format error
+     */
     submit(this.newsletterForm, async () => {
-      const result = await lastValueFrom(this.brevoApi.createContact(formData));
-      console.log('result', result);
+      const request = await lastValueFrom(this.brevoApi.createContact(formData));
+      if (request.success) {
+        this.submissionState.set({ success: true });
+      } else {
+        this.submissionState.set({
+          success: false,
+          error: 'Il y a eu une erreur. Veuillez réessayer plus tard.',
+        });
+      }
     });
-    console.log(formData);
   }
 }

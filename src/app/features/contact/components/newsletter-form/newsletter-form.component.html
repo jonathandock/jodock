@@ -52,8 +52,15 @@
       >
         Je m'inscris
       </button>
-      <p class="text-xs text-green-500 mt-2">Vous avez bien été inscrit à la newsletter, merci !</p>
-      <p class="text-xs text-red-500 mt-2">Une erreur est survenue</p>
+      @if (this.submissionState()) {
+        @if (this.submissionState()?.success) {
+          <p class="text-xs text-green-500 mt-2">
+            Vous avez bien été inscrit à la newsletter, merci !
+          </p>
+        } @else {
+          <p class="text-xs text-red-500 mt-2">{{ this.submissionState()?.error }}</p>
+        }
+      }
     </label>
   </form>
 </div>
