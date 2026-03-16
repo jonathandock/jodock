@@ -4,6 +4,6 @@ export const secrets = {
   },
   brevo: {
     apiKey:
-      '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',
+      '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',
   },
 };

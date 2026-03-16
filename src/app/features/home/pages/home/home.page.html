@@ -1,11 +1,10 @@
-<app-hero
-  [fullscreen]="true"
-  [logo]="'assets/logos/jodock.png'"
-  [backgroundImage]="'assets/images/home-intro.webp'"
->
+<app-hero [logo]="'assets/logos/jodock.png'" [backgroundImage]="'assets/images/home-intro.webp'">
 </app-hero>
 <app-section>
-  <app-newsletter-form></app-newsletter-form>
+  <app-dialog dialogId="newsletter-dialog" dialogButtonText="S'inscrire à la newsletter">
+    <app-newsletter-form></app-newsletter-form>
+  </app-dialog>
+  <!-- <app-newsletter-form></app-newsletter-form> -->
 </app-section>
 
 <app-social-media [position]="'fixed'"></app-social-media>

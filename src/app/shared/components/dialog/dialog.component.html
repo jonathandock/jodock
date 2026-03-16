@@ -1,0 +1,8 @@
+<button command="show-modal" [attr.commandfor]="dialogId()">{{ dialogButtonText() }}</button>
+
+<dialog [attr.id]="dialogId()" class="p-4 rounded-2xl">
+  <ng-content></ng-content>
+  <button command="close-modal" [attr.commandfor]="dialogId()">
+    <span class="material-symbols-outlined"> close </span>
+  </button>
+</dialog>

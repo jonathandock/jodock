@@ -1,0 +1,8 @@
+dialog {
+  inset: 0;
+  margin: auto;
+}
+
+::backdrop {
+  background: rgba(var(--black-rgb), 0.7);
+}
