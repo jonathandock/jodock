@@ -1,0 +1,31 @@
+:root {
+  /* COLORS */
+  --spotify: #1ed760;
+  --applemusic: #fa243c;
+  --deezer: #a238ff;
+  --youtube: #ff0000;
+  --instagram: #ff0069;
+  --facebook: #0866ff;
+  --soundcloud: #ff5500;
+
+  --white: #fff;
+  --white-rgb: 255, 255, 255;
+  --white-contrast: #333;
+  --white-contrast-rgb: 51, 51, 51;
+
+  --black: #333;
+  --black-rgb: 51, 51, 51;
+  --black-contrast: #fff;
+  --black-contrast-rgb: 255, 255, 255;
+
+  --accent: #fca42a;
+  --accent-rgb: 252, 164, 42;
+  --accent-contrast: #fff;
+  --accent-contrast-rgb: 255, 255, 255;
+
+  /* base color of components */
+  --base-color: var(--black);
+  --base-color-rgb: var(--black-rgb);
+  --base-color-contrast: var(--black-contrast);
+  --base-color-contrast-rgb: var(--black-contrast-rgb);
+}

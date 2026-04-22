@@ -1,0 +1,33 @@
+:host {
+  display: block;
+  margin: 0 1rem;
+  backdrop-filter: blur(4px);
+  border-radius: 1.5rem;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, .3) 0px 8px 24px;
+}
+
+h1 {
+  font-size: 8.2vw;
+}
+
+h2 {
+  font-family: var(--font-subheading);
+}
+
+/* Small tablets/large phones */
+@media (min-width: 640px) {
+  :host {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 3.3rem;
+  }
+
+  .new-release {
+    align-items: center;
+  }
+}

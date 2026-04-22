@@ -1,7 +1,6 @@
 .hero {
   width: 100%;
   position: relative;
-  min-height: 300px;
 }
 
 .hero.fullscreen {
@@ -16,6 +15,15 @@
   img.logo {
     position: absolute;
     margin: auto auto;
+  }
+}
+
+.hero.has-content {
+
+  .content {
+    width: 100%;
+    backdrop-filter: blur(10px);
+    background: rgba(0,0,0, 0.5);
   }
 }
 

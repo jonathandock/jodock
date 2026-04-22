@@ -1,3 +1,14 @@
-<div class="p-4">
-  <ng-content></ng-content>
-</div>
+<section
+  class="p-4"
+  [style.background-image]="'url('+backgroundImg()+')'"
+  [class.fullscreen]="fullscreen()">
+
+  @if(contrast() !== 'none') {
+    <div class="contrast" [class]="contrast()"></div>
+  }
+
+  <div class="section-content" [class]="'align-'+alignContent()">
+    <ng-content></ng-content>
+  </div>
+
+</section>

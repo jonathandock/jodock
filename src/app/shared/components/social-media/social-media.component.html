@@ -2,6 +2,7 @@
   class="flex gap-3 items-center p-3 links rounded-full shadow-lg"
   [style.position]="position()"
   [class.fixed]="position() === 'fixed'"
+  [class]="fill()"
 >
   @if (config() === 'full' || config() === 'music') {
     @for (music of musicLinks; track music.id) {

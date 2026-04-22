@@ -11,6 +11,7 @@ import { environment } from '../../../../environments/environment';
 export class SocialMediaComponent {
   public config = input<'full' | 'music' | 'social'>('full');
   public position = input<'fixed' | 'relative'>('relative');
+  public fill = input<"clear" | "solid">('solid');
 
   public socialMedia = environment.socialMedia;
   public musicLinks = environment.musicLinks;

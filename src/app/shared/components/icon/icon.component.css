@@ -1,0 +1,50 @@
+:host {
+  --icon-color: var(--base-color);
+  --icon-background-color: transparent;
+  --icon-border-radius: 0px;
+  --icon-font-size: var(--font-size-base);
+}
+
+/* fill */
+.clear {
+  --icon-color: var(--base-color);
+  --icon-background-color: transparent;
+}
+
+.solid {
+  --icon-color: var(--base-color-contrast);
+  --icon-background-color: var(--base-color);
+}
+
+/* shape */
+.shape-default {
+  --icon-border-radius: 0px;
+}
+
+.shape-rounded {
+  --icon-border-radius: 8px;
+}
+
+.shape-circle {
+  --icon-border-radius: 1000px;
+}
+
+/* size */
+.size-small {
+  --icon-font-size: var(--font-size-s);
+}
+
+.size-default {
+  --icon-font-size: var(--font-size-base);
+}
+
+.size-large {
+  --icon-font-size: var(--font-size-3xl);
+}
+
+span {
+  color: var(--icon-color);
+  background-color: var(--icon-background-color);
+  border-radius: var(--icon-border-radius);
+  font-size: var(--icon-font-size);
+}

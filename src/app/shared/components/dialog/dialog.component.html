@@ -1,0 +1,10 @@
+<app-button color="white" command="show-modal" [commandFor]="dialogId()">
+  {{ dialogButtonText() }}
+</app-button>
+
+<dialog [attr.id]="dialogId()" class="p-4 pt-8 rounded-2xl shadow-xl/20">
+  <ng-content></ng-content>
+  <app-button command="close" fill="clear" [commandFor]="dialogId()" class="close-dialog p-3">
+    <span class="material-symbols-outlined"> close </span>
+  </app-button>
+</dialog>

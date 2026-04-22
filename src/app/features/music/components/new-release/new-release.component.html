@@ -1,0 +1,18 @@
+
+  <h1 class="outlined-text text-2xl text-white mb-4">
+    Nouveau single
+  </h1>
+  <div class="new-release flex items-start justify-center gap-4">
+    <div class="overflow-hidden border-cyan-950 shadow-2xl border-6">
+      <img [ngSrc]="song().image" width="250" height="250" [attr.alt]="song().title">
+    </div>
+    <div>
+      <h2 class="text-2xl text-white">{{ song().title }}</h2>
+      <p class="text-white mb-4">{{ song().description }}</p>
+      <app-button (click)="open(song().url)" color="accent">
+        Écouter
+        <!--<app-icon [icon]="IconEnum.PLAY_CIRCLE" color="white"></app-icon>-->
+      </app-button>
+    </div>
+  </div>
+

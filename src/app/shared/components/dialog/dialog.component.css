@@ -1,0 +1,29 @@
+dialog {
+  inset: 0;
+  margin: auto;
+}
+
+dialog[open] {
+  animation: fadein 0.2s ease-in-out forwards;
+}
+
+.close-dialog {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+::backdrop {
+  background: rgba(var(--black-rgb), 0.2);
+  backdrop-filter: blur(5px);
+  animation: fadein 0.2s ease-in-out forwards;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

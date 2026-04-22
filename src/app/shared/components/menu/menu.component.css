@@ -1,4 +1,19 @@
+:host {
+  z-index: 1;
+  position: fixed;
+  inset: 0 0 auto 0;
+}
+
 menu {
   width: 100%;
-  background: var(--white);
+  height: var(--component-menu-height);
+
+  h1 {
+    line-height: 1;
+    font-size: 8vw;
+  }
+
+  h2 {
+
+  }
 }

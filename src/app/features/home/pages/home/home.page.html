@@ -1,11 +1,23 @@
-<app-hero
+<app-section
   [fullscreen]="true"
-  [logo]="'assets/logos/jodock.png'"
-  [backgroundImage]="'assets/images/home-intro.webp'"
->
-</app-hero>
-<app-section>
+  [contrast]="'dark'"
+  [alignContent]="'bottom'"
+  [backgroundImg]="'assets/images/home-intro.webp'">
+
+  <app-logo></app-logo>
+  <app-new-release [song]="featuredSong()"></app-new-release>
+
+</app-section>
+
+<app-section id="newsletter">
   <app-newsletter-form></app-newsletter-form>
 </app-section>
 
-<app-social-media [position]="'fixed'"></app-social-media>
+<app-title title="contact"></app-title>
+
+<app-section>
+  <div class="text-center py-4">
+    <p class="mb-4">Pour toute demande de booking ou de renseignements supplémentaires, contactez-nous via l'email ci-dessous</p>
+    <a href="mailto:jodockmusic@gmail.com">jodocmusic@gmail.com</a>
+  </div>
+</app-section>

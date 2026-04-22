@@ -1,4 +1,6 @@
 :host {
-  display: block;
-  padding-bottom: 100px;
+  display: grid;
+  min-height: 100dvh;
+  /*grid-template-rows: 1fr auto;*/
+  /*padding-top: var(--component-menu-height);*/
 }

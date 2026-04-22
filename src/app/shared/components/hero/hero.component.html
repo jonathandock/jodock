@@ -1,4 +1,4 @@
-<div class="hero flex items-center justify-center" [class.fullscreen]="fullscreen()">
+<div class="hero relative flex items-center justify-center " [class.fullscreen]="fullscreen()" [class.has-content]="hasContent()">
   <img
     fill
     priority
@@ -6,14 +6,21 @@
     class="background-image object-cover"
     alt="Image de présentation du groupe JODOCK"
   />
-  <img
-    class="logo"
-    [ngSrc]="logo()"
-    width="400"
-    height="280"
-    priority
-    alt="Image de présentation du groupe JODOCK"
-  />
+  @if (logo()) {
+    <img
+      class="logo"
+      [ngSrc]="logo()"
+      width="400"
+      height="280"
+      priority
+      alt="Image de présentation du groupe JODOCK"
+    />
+  }
+
+  <div class="content w-100 flex items-center justify-center px-4 py-16 inset-0 z-1">
+    <ng-content></ng-content>
+  </div>
+
   @if (fullscreen()) {
     <span class="material-symbols-outlined icon-down animate-bounce"> arrow_downward </span>
   }
