@@ -1,0 +1,79 @@
+:host {
+  --button-color: var(--base-color-contrast);
+  --button-background-color: var(--base-color);
+  --button-border-radius: 0px;
+  --button-border-width: 1px;
+  --button-border-color: transparent;
+  --button-font-size: var(--font-size-base);
+  --button-font-family: var(--font-text);
+  --button-font-weight: 800;
+}
+
+/* fill */
+.clear {
+  --button-color: var(--base-color);
+  --button-background-color: transparent;
+}
+
+.outline {
+  --button-color: var(--base-color);
+  --button-background-color: transparent;
+  --button-border-color: var(--base-color);
+}
+
+.solid {
+  --button-color: var(--base-color-contrast);
+  --button-background-color: var(--base-color);
+  --button-border-color: var(--base-color);
+}
+
+/* shape */
+.shape-default {
+  --button-border-radius: 0px;
+}
+
+.shape-rounded {
+  --button-border-radius: 8px;
+}
+
+.shape-circle {
+  --button-border-radius: 1000px;
+}
+
+/* size */
+.size-small {
+  --button-font-size: var(--font-size-s);
+}
+
+.size-default {
+  --button-font-size: var(--font-size-base);
+}
+
+.size-large {
+  --button-font-size: var(--font-size-2xl);
+}
+
+button {
+  display: flex;
+  outline: none;
+  cursor: pointer;
+  line-height: 1;
+
+  font-size: var(--button-font-size);
+  font-family: var(--button-font-family);
+  font-weight: var(--button-font-weight);
+  text-transform: uppercase;
+
+  color: var(--button-color);
+  background-color: var(--button-background-color);
+
+  border-color: var(--button-border-color);
+  border-width: var(--button-border-width);
+  border-radius: var(--button-border-radius);
+
+  transition: opacity 0.2s ease-in-out;
+}
+
+button:hover {
+  opacity: 0.8;
+}

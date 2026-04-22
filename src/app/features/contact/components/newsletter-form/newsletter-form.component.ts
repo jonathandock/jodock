@@ -3,10 +3,11 @@ import { form, FormField, required, email, submit } from '@angular/forms/signals
 import { NewsletterData } from '../../models/forms.models';
 import { lastValueFrom } from 'rxjs';
 import { BrevoApi } from '../../services/brevo/brevo-api';
+import { ButtonComponent } from '../../../../shared/components/button/button.component';
 
 @Component({
   selector: 'app-newsletter-form',
-  imports: [FormField],
+  imports: [FormField, ButtonComponent],
   templateUrl: './newsletter-form.component.html',
   styleUrl: './newsletter-form.component.css',
 })

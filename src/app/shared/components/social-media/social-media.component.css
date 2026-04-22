@@ -1,6 +1,4 @@
 .links {
-  bottom: 1rem;
-  left: 50%;
   background: var(--black);
   width: max-content;
   width: -webkit-max-content;
@@ -12,6 +10,13 @@
 
 .links.fixed {
   transform: translateX(-50%);
+  bottom: 1rem;
+  left: 50%;
+}
+
+.links.clear {
+  background: none;
+  backdrop-filter: blur(20px);
 }
 
 .divider {

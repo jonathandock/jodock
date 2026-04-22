@@ -1,9 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
-@import './styles/fonts.css';
-@import './styles/icons.css';
-@import './styles/variables.css';
+
+/* variables */
+@import './styles/variables/fonts.css';
+@import './styles/variables/colors.css';
+@import './styles/variables/components.css';
+
+/* components */
+@import './styles/components/img.css';
+@import './styles/components/page.css';
+@import './styles/components/icons.css';
+
+@import './styles/colors.css';
+@import './styles/fontfaces.css';
+@import './styles/typography.css';
 
 * {
   box-sizing: border-box;

@@ -1,0 +1,20 @@
+.color-white {
+  --base-color: var(--white);
+  --base-color-rgb: var(--white-rgb);
+  --base-color-contrast: var(--white-contrast);
+  --base-color-contrast-rgb: var(--white-contrast-rgb);
+}
+
+.color-black {
+  --base-color: var(--black);
+  --base-color-rgb: var(--black-rgb);
+  --base-color-contrast: var(--black-contrast);
+  --base-color-contrast-rgb: var(--black-contrast-rgb);
+}
+
+.color-accent {
+  --base-color: var(--accent);
+  --base-color-rgb: var(--accent-rgb);
+  --base-color-contrast: var(--accent-contrast);
+  --base-color-contrast-rgb: var(--accent-contrast-rgb);
+}

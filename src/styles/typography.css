@@ -1,0 +1,26 @@
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+}
+
+body {
+  font-family: var(--font-text);
+}
+
+a {
+  color: var(--accent);
+}
+
+.outlined-text {
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: 1px;
+}
+
+.outlined-text.dark {
+  -webkit-text-stroke-color: var(--black);
+}

@@ -9,6 +9,7 @@ import { Component, input, signal } from '@angular/core';
 })
 export class HeroComponent {
   public logo = input<string>('');
-  public fullscreen = input<boolean>(false);
   public backgroundImage = input<string>('');
+  public hasContent = input<boolean>(false);
+  public fullscreen = input<boolean>(false);
 }

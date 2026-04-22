@@ -1,8 +1,9 @@
 import { Component, input } from '@angular/core';
+import { ButtonComponent } from '../button/button.component';
 
 @Component({
   selector: 'app-dialog',
-  imports: [],
+  imports: [ButtonComponent],
   templateUrl: './dialog.component.html',
   styleUrl: './dialog.component.css',
 })

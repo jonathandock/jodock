@@ -1,5 +1,8 @@
 .newsletter-form {
-  max-width: 400px;
   margin: 0 auto;
   width: 100%;
+
+  @media (min-width: 640px) {
+    max-width: 600px;
+  }
 }
